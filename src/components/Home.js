@@ -23,13 +23,13 @@ function Home() {
 
         <div className="home-buttons">
   <a
-    href="/Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="btn"
-  >
-    View Resume
-  </a>
+  href={`${process.env.PUBLIC_URL}/resume.pdf`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View Resume
+</a>
+
 
   <a href="#projects" className="btn btn-outline">
     View Projects
