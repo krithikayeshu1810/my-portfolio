@@ -1,287 +1,153 @@
-/* ===============================
-   GLOBAL RESET & TEXT VISIBILITY
-   =============================== */
-.app {
-  min-height: 100vh;
-  background: linear-gradient(135deg, 36B59E, 3684B5, 4336B5);
-  color: #e5e7eb;
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(
-  270deg,
-  #000000,
-  #1f2933,
-  #000000
-);
-  background-size: 600% 600%;
-  animation: gradientBG 12s ease infinite;
-  color: #e5e7eb;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
 }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
-
-
-h1, h2, h3, h4, h5, h6 {
-  color: #ffffff;
-}
-
-p, li, span {
-  color: #cbd5f5;
-  line-height: 1.6;
-}
-
-/* ===============================
-   APP BACKGROUND
-   =============================== */
-
-.app {
-  min-height: 100vh;
-  background: radial-gradient(
-    1200px circle at 10% 10%,
-    #0f172a,
-    #020617 70%
-  );
-  overflow-x: hidden;
-}
-
-/* ===============================
-   NAVBAR
-   =============================== */
-
-.navbar {
+/* ================= NAVBAR ================= */
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
+  background: transparent;
 }
 
-.navbar h1,
-.navbar h2 {
-  color: #ffffff;
+nav h1 {
+  color: white;
 }
 
-.navbar ul {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
+  gap: 25px;
 }
 
-.navbar li {
-  cursor: pointer;
-  font-size: 15px;
-  color: #e5e7eb;
-  transition: color 0.3s ease;
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
 }
 
-.navbar li:hover {
-  color: #4da6ff;
-}
-
-/* ===============================
-   SECTIONS
-   =============================== */
-
+/* ================= COMMON SECTIONS ================= */
 section {
   padding: 80px 60px;
 }
 
-/* ===============================
-   HOME SECTION
-   =============================== */
-
-.home h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
+section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
 }
 
-.home span {
-  color: #4da6ff;
+/* ================= HOME ================= */
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.home p {
+.home-content {
   max-width: 600px;
-  font-size: 16px;
 }
 
-/* ===============================
-   BUTTON (YOUR GIVEN STYLE)
-   =============================== */
+.home-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: #3ea6ff;
+}
+
+/* BADGES */
+.badges {
+  margin: 15px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #3ea6ff;
+  color: #3ea6ff;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* TEXT */
+.home-content p {
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* BUTTONS */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+}
 
 .btn {
-  display: inline-block;
-  padding: 12px 26px;
+  padding: 12px 28px;
   border-radius: 30px;
-  background: #1e90ff;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  margin-top: 25px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #2563eb;
-}
-
-/* ===============================
-   LIST STYLING (SKILLS)
-   =============================== */
-
-ul li {
-  margin-bottom: 8px;
-}
-
-/* ===============================
-   PROJECT CARD (OPTIONAL)
-   =============================== */
-
-.project {
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-/* ===============================
-   CONTACT SECTION
-   =============================== */
-
-.contact p {
   font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-   =============================== */
-
-@media (max-width: 900px) {
-  section {
-    padding: 60px 30px;
-  }
-
-  .home h1 {
-    font-size: 36px;
-  }
-
-  .navbar {
-    padding: 20px 30px;
-  }
-
-  .navbar ul {
-    gap: 15px;
-  }
+.btn-outline {
+  border: 2px solid #3ea6ff;
+  color: #3ea6ff;
+  background: transparent;
 }
 
-
-
-
-
-
-/* ===============================
-   PROJECTS SECTION
-   =============================== */
-
-.projects {
-  padding: 80px 60px;
+.btn-outline:hover {
+  background: #3ea6ff;
+  color: white;
 }
 
-.projects h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #ffffff;
+/* IMAGE */
+.home-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid #3ea6ff;
+  object-fit: cover;
 }
 
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
-  border-radius: 15px;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.project-card h3 {
-  margin-bottom: 10px;
-  color: #4da6ff;
-}
-
-.project-card p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.tech {
-  font-size: 13px;
-  color: #93c5fd;
-}
-
-
-
-
-
-
-/* Fix About section spacing */
+/* ================= ABOUT ================= */
 .about p {
-  margin-bottom: 10px;   /* controls gap */
-  margin-top: 0;
-  line-height: 1.6;
+  max-width: 900px;
+  line-height: 1.8;
+  color: #e0e0e0;
 }
 
-
-
-
-
-
-
-/* ===============================
-   SKILLS SECTION
-   =============================== */
-
-.skills {
-  padding: 80px 60px;
-}
-
-.skills h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.skills-container {
+/* ================= SKILLS ================= */
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  gap: 30px;
 }
 
 .skill-card {
   background: rgba(255, 255, 255, 0.05);
   padding: 25px;
   border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .skill-card h3 {
+  color: #3ea6ff;
   margin-bottom: 20px;
-  color: #4da6ff;
 }
 
 .skill {
@@ -293,95 +159,256 @@ ul li {
   justify-content: space-between;
   font-size: 14px;
   margin-bottom: 6px;
+  color: #e0e0e0;
 }
 
-.bar {
+/* PROGRESS BAR */
+.progress {
+  width: 100%;
   height: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
   overflow: hidden;
 }
 
-.fill {
+.bar {
   height: 100%;
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  background: linear-gradient(90deg, #3ea6ff, #6f7bff);
   border-radius: 10px;
 }
 
-
-
-.home-image img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid #38bdf8;
-  box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
+/* ================= PROJECTS ================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
 }
 
-
-
-
-/* ===============================
-   HOME SECTION STYLES
-   =============================== */
-
-.name {
-  color: #4da6ff;
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.badge {
-  margin-left: 12px;
-  padding: 6px 12px;
-  background: rgba(56, 189, 248, 0.15);
-  border: 1px solid #38bdf8;
-  border-radius: 20px;
-  font-size: 14px;
-  color: #38bdf8;
+.project-card h3 {
+  color: #3ea6ff;
+  margin-bottom: 10px;
 }
 
-.home {
+.project-card p {
+  color: #e0e0e0;
+}
+
+/* ================= CONTACT ================= */
+.contact p {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* ================= NAVBAR ================= */
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 60px;
+  background: transparent;
+}
+
+nav h1 {
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* ================= COMMON SECTIONS ================= */
+section {
   padding: 80px 60px;
 }
 
-.home-content {
-  max-width: 60%;
+section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
 }
 
-.home-image img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid #38bdf8;
-  box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
-}
-.app {
+/* ================= HOME ================= */
+.home {
   min-height: 100vh;
-  background-color: #000000; /* pure black */
-  color: #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.home-content {
+  max-width: 600px;
+}
 
+.home-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
 
+.name {
+  color: #3ea6ff;
+}
 
+/* BADGES */
+.badges {
+  margin: 15px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #3ea6ff;
+  color: #3ea6ff;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* TEXT */
+.home-content p {
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* BUTTONS */
 .home-buttons {
   display: flex;
-  gap: 15px;
-  margin-top: 25px;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-outline {
+  border: 2px solid #3ea6ff;
+  color: #3ea6ff;
   background: transparent;
-  border: 2px solid #38bdf8;
-  color: #38bdf8;
 }
 
 .btn-outline:hover {
-  background: #38bdf8;
-  color: #020617;
+  background: #3ea6ff;
+  color: white;
 }
 
+/* IMAGE */
+.home-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid #3ea6ff;
+  object-fit: cover;
+}
+
+/* ================= ABOUT ================= */
+.about p {
+  max-width: 900px;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* ================= SKILLS ================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card h3 {
+  color: #3ea6ff;
+  margin-bottom: 20px;
+}
+
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #e0e0e0;
+}
+
+/* PROGRESS BAR */
+.progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3ea6ff, #6f7bff);
+  border-radius: 10px;
+}
+
+/* ================= PROJECTS ================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+  color: #3ea6ff;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #e0e0e0;
+}
+
+/* ================= CONTACT ================= */
+.contact p {
+  margin-bottom: 10px;
+  color: #ddd;
+}
